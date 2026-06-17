@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fernanda Fit – Combo da Confeitaria Saudável</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          menta: '#8BC4A0',
+          'menta-light': '#d0eadc',
+          'menta-dark': '#4a8a69',
+          cacau: '#C9A98A',
+          'rose-gold': '#C9986A',
+          creme: '#FAF7F2',
+          escuro: '#1a1a18',
+          'escuro-medio': '#2c2b27',
+          texto: '#3a3830',
+          'texto-claro': '#6b6558',
+        },
+        fontFamily: {
+          serif: ['"Playfair Display"', 'serif'],
+          sans: ['Lato', 'sans-serif'],
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background-color: #FAF7F2; color: #3a3830; }
+  
+  /* Botão principal de conversão */
+  .btn-comprar {
+    background-color: #4a8a69;
+    color: white;
+    box-shadow: 0 10px 25px -5px rgba(74, 138, 105, 0.5);
+    transition: all 0.3s ease;
+  }
+  .btn-comprar:hover {
+    background-color: #3b7054;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px -5px rgba(74, 138, 105, 0.6);
+  }
+  
+  .btn-pulsate {
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(74, 138, 105, 0.7); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(74, 138, 105, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(74, 138, 105, 0); }
+  }
+
+  /* Patterns e backgrounds */
+  .bg-pattern {
+    background-image: radial-gradient(#C9A98A 1px, transparent 1px);
+    background-size: 20px 20px;
+    background-color: #FAF7F2;
+  }
+  
+  /* FAQ Accordion Nativo */
+  details > summary {
+    list-style: none;
+  }
+  details > summary::-webkit-details-marker {
+    display: none;
+  }
+  details[open] summary ~ * {
+    animation: sweep .3s ease-in-out;
+  }
+  @keyframes sweep {
+    0%    {opacity: 0; margin-top: -10px}
+    100%  {opacity: 1; margin-top: 0px}
+  }
+</style>
+</head>
+<body class="font-sans antialiased overflow-x-hidden">
+
+  <!-- 1. A DOBRA PRINCIPAL (Atenção Imediata) -->
+  <div class="bg-escuro text-creme text-center py-2 px-4 text-xs sm:text-sm font-bold tracking-wide uppercase">
+    🚨 Oferta relâmpago: De R$ 196,70 por apenas R$ 29,90! 🚨
+  </div>
+
+  <nav class="py-4 text-center">
+    <!-- Substituição pela logo oficial -->
+    <img src="logo_fernanda_fit.png" alt="Logo Fernanda Fit" class="h-16 sm:h-20 mx-auto object-contain">
+  </nav>
+
+  <header class="pt-6 pb-12 px-6 text-center max-w-5xl mx-auto flex flex-col items-center">
+    <span class="text-menta-dark font-bold tracking-widest uppercase text-xs sm:text-sm mb-4 block border border-menta-dark rounded-full px-4 py-1 inline-block">
+      Sem Glúten • Sem Lactose • Sem Açúcar
+    </span>
+    
+    <!-- Promessa Forte -->
+    <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-escuro mb-6 leading-tight max-w-4xl">
+      Coma doces <span class="text-cacau italic">sem culpa</span> e prontos em minutos!
+    </h1>
+    
+    <p class="text-lg sm:text-xl text-texto-claro mb-8 max-w-2xl mx-auto">
+      Mais de 80 receitas testadas de sobremesas saudáveis, feitas com ingredientes baratos que você <strong>já tem na sua cozinha.</strong>
+    </p>
+
+    <!-- Tangibilização na primeira dobra: Mockup do Produto -->
+    <div class="w-full max-w-lg mx-auto mb-8 relative">
+      <div class="absolute inset-0 bg-menta-light rounded-full blur-3xl opacity-50 -z-10"></div>
+      <img src="mockup_combo_3.png" alt="Combo de E-books Fernanda Fit" class="w-full h-auto drop-shadow-2xl rounded-xl object-contain">
+    </div>
+
+    <!-- Primeiro CTA -->
+    <a href="#checkout" class="btn-comprar btn-pulsate w-full sm:w-auto text-center font-bold text-lg sm:text-xl py-5 px-10 rounded-full">
+      👇 SIM, QUERO COMER DOCE SEM CULPA
+    </a>
+    <p class="mt-3 text-xs text-texto-claro">🔒 Compra 100% Segura • Acesso Imediato</p>
+  </header>
+
+  <!-- 2. A DOR E O PROBLEMA (Conexão) -->
+  <section class="py-16 px-6 bg-escuro text-creme text-center sm:text-left">
+    <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold mb-6 text-rose-gold">Você já passou por isso?</h2>
+        <ul class="space-y-4 text-lg">
+          <li class="flex items-start gap-3">
+            <span class="text-2xl">❌</span>
+            <p>Bate a vontade de comer doce, você fura a dieta e <strong>depois vem a culpa</strong>.</p>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-2xl">❌</span>
+            <p>Gasta horrores com ingredientes "fit" que têm gosto de papelão.</p>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-2xl">❌</span>
+            <p>Perde horas na cozinha testando receitas da internet que no final sempre dão errado.</p>
+          </li>
+        </ul>
+      </div>
+      <div class="bg-escuro-medio p-8 rounded-2xl border border-texto-claro text-center">
+        <h3 class="font-serif text-2xl mb-4 text-menta-light">Mas não precisa ser assim.</h3>
+        <p class="text-texto-claro text-base mb-6">
+          Você não precisa cortar o doce da sua vida e nem ser um chef de cozinha para comer bem. O segredo está nas proporções certas de ingredientes comuns.
+        </p>
+        <a href="#checkout" class="btn-comprar inline-block w-full text-center font-bold text-base py-4 px-6 rounded-full">
+          QUERO A SOLUÇÃO AGORA
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. A SOLUÇÃO E A TANGIBILIZAÇÃO -->
+  <section class="py-16 px-6 bg-white text-center">
+    <div class="max-w-4xl mx-auto">
+      <span class="text-cacau font-bold tracking-widest uppercase text-sm mb-2 block">O que você vai receber</span>
+      <h2 class="font-serif text-3xl sm:text-5xl font-bold text-escuro mb-10">Tudo o que você precisa em um só lugar</h2>
+      
+      <div class="grid sm:grid-cols-3 gap-8">
+        <div class="p-6 rounded-2xl bg-creme border border-menta-light hover:shadow-lg transition">
+          <div class="text-5xl mb-4">🍰</div>
+          <h3 class="font-bold text-xl mb-2">80+ Receitas</h3>
+          <p class="text-texto-claro text-sm">Bolos, tortas, mousses e docinhos rápidos. Tudo testado e aprovado. Zero erro.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-creme border border-menta-light hover:shadow-lg transition">
+          <div class="text-5xl mb-4">⏱️</div>
+          <h3 class="font-bold text-xl mb-2">Pronto em Minutos</h3>
+          <p class="text-texto-claro text-sm">Receitas práticas de liquidificador e microondas para quem não tem tempo a perder.</p>
+        </div>
+        <div class="p-6 rounded-2xl bg-creme border border-menta-light hover:shadow-lg transition">
+          <div class="text-5xl mb-4">💰</div>
+          <h3 class="font-bold text-xl mb-2">Ingredientes Baratos</h3>
+          <p class="text-texto-claro text-sm">Chega de caçar ingredientes caros. Você vai usar o que provavelmente já tem na despensa.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. PROVA SOCIAL INQUESTIONÁVEL -->
+  <section class="py-16 px-6 bg-menta-light">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-menta-dark mb-10">Quem já testou, amou!</h2>
+      
+      <div class="grid md:grid-cols-3 gap-6 mb-10">
+        <!-- Depoimento 1 -->
+        <div class="bg-white p-6 rounded-2xl shadow text-left">
+          <div class="flex text-rose-gold mb-3 text-lg">★★★★★</div>
+          <p class="text-texto-claro mb-4 italic">"Eu achei que nunca mais ia poder comer um bolo de chocolate por causa da lactose. As receitas são incrivelmente fáceis e meu marido nem percebeu que era fit!"</p>
+          <p class="font-bold text-sm text-escuro">— Mariana S., 34 anos</p>
+        </div>
+        <!-- Depoimento 2 -->
+        <div class="bg-white p-6 rounded-2xl shadow text-left">
+          <div class="flex text-rose-gold mb-3 text-lg">★★★★★</div>
+          <p class="text-texto-claro mb-4 italic">"Salvou minha TPM! Não sou boa na cozinha, mas as receitas de microondas me salvaram. O e-book já se pagou no primeiro dia."</p>
+          <p class="font-bold text-sm text-escuro">— Juliana R., 28 anos</p>
+        </div>
+        <!-- Depoimento 3 -->
+        <div class="bg-white p-6 rounded-2xl shadow text-left">
+          <div class="flex text-rose-gold mb-3 text-lg">★★★★★</div>
+          <p class="text-texto-claro mb-4 italic">"Eu sou diabética e sempre sofri muito em aniversários. Com essas receitas eu levo meu próprio doce e como sem culpa nenhuma. Uma delícia!"</p>
+          <p class="font-bold text-sm text-escuro">— Fátima G., 52 anos</p>
+        </div>
+      </div>
+
+      <!-- Terceiro CTA -->
+      <a href="#checkout" class="btn-comprar inline-block w-full sm:w-auto text-center font-bold text-lg py-4 px-10 rounded-full">
+        QUERO SER A PRÓXIMA A TER RESULTADOS
+      </a>
+    </div>
+  </section>
+
+  <!-- 5. ANCORAGEM DE PREÇO E OFERTA IRRESISTÍVEL -->
+  <section class="py-16 px-4 bg-pattern" id="checkout">
+    <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-2xl overflow-hidden border border-menta-light relative">
+      
+      <!-- Fita de desconto -->
+      <div class="absolute top-6 right-[-35px] bg-rose-gold text-white font-bold py-1 px-10 transform rotate-45 text-sm shadow-md">
+        85% OFF
+      </div>
+
+      <div class="bg-escuro py-5 text-center">
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-menta-light flex items-center justify-center gap-2">
+          😱 Deu a louca na Fernanda!
+        </h2>
+      </div>
+      
+      <div class="p-6 sm:p-10">
+        <p class="text-center text-lg mb-8 text-texto">
+          Decidi liberar meu acervo completo de sobremesas saudáveis por um preço que a concorrência simplesmente <strong>não consegue oferecer</strong>.
+        </p>
+        
+        <!-- Value Stack (Ancoragem) -->
+        <div class="bg-creme p-6 rounded-xl mb-8">
+          <h3 class="font-bold text-escuro mb-4 text-center">Veja tudo o que você está levando hoje:</h3>
+          <ul class="space-y-3 text-sm sm:text-base">
+            <li class="flex justify-between items-center border-b border-gray-200 pb-2">
+              <span>✅ Combo 80+ Receitas Principais</span>
+              <span class="text-texto-claro line-through">R$ 109,80</span>
+            </li>
+            <li class="flex justify-between items-center border-b border-gray-200 pb-2">
+              <span>🎁 Bônus 1: Guia de Compras no Mercado</span>
+              <span class="text-texto-claro line-through">R$ 47,00</span>
+            </li>
+            <li class="flex justify-between items-center">
+              <span>🎁 Bônus 2: 20 Geleias Fit pro Café</span>
+              <span class="text-texto-claro line-through">R$ 39,90</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="flex flex-col items-center justify-center mb-8">
+          <span class="text-texto-claro text-lg mb-1">Preço total normal: <span class="line-through">R$ 196,70</span></span>
+          <span class="text-texto font-bold mt-2">Mas APENAS HOJE por:</span>
+          <div class="text-6xl sm:text-8xl font-black text-escuro font-sans tracking-tighter mt-2 text-menta-dark">
+            <span class="text-3xl align-top mr-1">R$</span>29<span class="text-3xl align-top">,90</span>
+          </div>
+          <span class="text-sm mt-2 text-texto-claro">Taxa única. Acesso Imediato.</span>
+        </div>
+
+        <!-- CTA Principal da Oferta -->
+        <a href="SEU_LINK_DE_CHECKOUT_AQUI" class="btn-comprar btn-pulsate block w-full text-center font-black text-xl sm:text-2xl py-6 rounded-full uppercase tracking-wide">
+          🛒 Comprar Agora por R$ 29,90
+        </a>
+        
+        <div class="flex justify-center items-center gap-4 mt-6 text-2xl text-texto-claro grayscale opacity-60">
+          💳 <span class="text-sm">PIX e Cartões aceitos</span> 🏦
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. REVERSÃO DE RISCO (Garantia) -->
+  <section class="py-16 px-4 bg-escuro text-creme text-center">
+    <div class="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8 text-left">
+      <div class="text-8xl flex-shrink-0 drop-shadow-lg">
+        🛡️
+      </div>
+      <div>
+        <h2 class="font-serif text-3xl font-bold text-menta-light mb-4">Risco Zero: O Risco é Todo Meu</h2>
+        <p class="text-lg text-gray-300 mb-6">
+          Assista às aulas, faça as receitas na sua casa. Se em até <strong>7 dias</strong> você não gostar por qualquer motivo — ou achar que não é para você — basta apertar um botão no suporte e devolvemos cada centavo do seu dinheiro. Sem letras miúdas.
+        </p>
+        <!-- CTA de Segurança -->
+        <a href="#checkout" class="inline-block bg-menta-dark hover:bg-menta text-white font-bold py-3 px-8 rounded-full transition-all border border-menta-light">
+          Quero testar sem riscos
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. PERGUNTAS FREQUENTES (FAQ) -->
+  <section class="py-16 px-6 bg-white">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="font-serif text-3xl sm:text-4xl font-bold text-center text-escuro mb-10">Ainda com dúvidas?</h2>
+      
+      <div class="space-y-4">
+        <!-- Pergunta 1 -->
+        <details class="bg-creme rounded-lg border border-menta-light p-5 group cursor-pointer">
+          <summary class="font-bold text-lg text-escuro flex justify-between items-center outline-none">
+            Como eu vou receber o material?
+            <span class="text-menta-dark group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <div class="mt-4 text-texto-claro text-base leading-relaxed">
+            Imediatamente após a confirmação do pagamento, você receberá um e-mail com o seu login e senha para acessar a plataforma onde todos os e-books e bônus estão disponíveis para baixar ou ler online.
+          </div>
+        </details>
+
+        <!-- Pergunta 2 -->
+        <details class="bg-creme rounded-lg border border-menta-light p-5 group cursor-pointer">
+          <summary class="font-bold text-lg text-escuro flex justify-between items-center outline-none">
+            Sou iniciante, vou conseguir fazer?
+            <span class="text-menta-dark group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <div class="mt-4 text-texto-claro text-base leading-relaxed">
+            Com certeza! O material foi criado exatamente para quem não tem habilidade na cozinha. As receitas são passo a passo, muitas delas feitas apenas misturando ingredientes ou usando o liquidificador.
+          </div>
+        </details>
+
+        <!-- Pergunta 3 -->
+        <details class="bg-creme rounded-lg border border-menta-light p-5 group cursor-pointer">
+          <summary class="font-bold text-lg text-escuro flex justify-between items-center outline-none">
+            Os ingredientes são fáceis de achar?
+            <span class="text-menta-dark group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <div class="mt-4 text-texto-claro text-base leading-relaxed">
+            Sim! Um dos grandes diferenciais do nosso material é a economia. Focamos em ingredientes comuns de supermercado, sem exigir farinhas caríssimas ou produtos importados.
+          </div>
+        </details>
+
+        <!-- Pergunta 4 -->
+        <details class="bg-creme rounded-lg border border-menta-light p-5 group cursor-pointer">
+          <summary class="font-bold text-lg text-escuro flex justify-between items-center outline-none">
+            O acesso tem validade?
+            <span class="text-menta-dark group-open:rotate-180 transition-transform">▼</span>
+          </summary>
+          <div class="mt-4 text-texto-claro text-base leading-relaxed">
+            O seu acesso ao material é <strong>vitalício</strong>. Você paga apenas uma vez e pode consultar as receitas sempre que quiser, para sempre.
+          </div>
+        </details>
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="#checkout" class="btn-comprar inline-block w-full sm:w-auto text-center font-bold text-lg py-5 px-10 rounded-full">
+          TUDO RESPONDIDO! QUERO GARANTIR MINHA VAGA
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-escuro-medio text-texto-claro py-12 px-4 text-center text-sm border-t border-gray-800">
+    <div class="max-w-4xl mx-auto flex flex-col items-center justify-center">
+      <img src="logo_fernanda_fit.png" alt="Logo Fernanda Fit" class="h-12 mb-6 opacity-80 grayscale hover:grayscale-0 transition">
+      <p class="text-creme mb-2">© 2026 Fernanda Fit · Todos os direitos reservados</p>
+      <p class="max-w-md mx-auto opacity-60 mt-4 text-xs leading-relaxed">
+        Este produto não garante a obtenção de resultados. Qualquer referência ao desempenho de uma estratégia não deve ser interpretada como uma garantia de resultados. Este produto tem caráter estritamente informativo e não substitui o acompanhamento médico, de nutricionistas ou profissionais de saúde.
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
